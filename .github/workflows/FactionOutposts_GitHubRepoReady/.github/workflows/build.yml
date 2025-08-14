@@ -1,0 +1,21 @@
+name: Build FactionOutposts
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Temurin JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - name: Build with Maven
+        working-directory: FactionOutposts
+        run: mvn -DskipTests package
+      - name: Upload jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: FactionOutposts-jar
+          path: FactionOutposts/target/*.jar
