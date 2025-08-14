@@ -1,0 +1,13 @@
+name: FactionOutposts
+main: com.yourname.factionoutposts.FactionOutposts
+version: 1.2.0-reflection
+softdepend: [SaberFactions, Vault, WorldEdit]
+api-version: 1.20
+commands:
+  outpost:
+    description: Manage outposts
+    usage: /outpost
+permissions:
+  outpost.admin:
+    description: Admin commands for outposts
+    default: op

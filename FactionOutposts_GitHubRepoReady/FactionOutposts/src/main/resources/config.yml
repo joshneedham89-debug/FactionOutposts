@@ -1,0 +1,24 @@
+capture:
+  tick-interval-ticks: 40
+  progress-per-tick: 5
+  decay-per-tick: 3
+  required-majority: 0.6
+
+payout:
+  interval-minutes: 60
+messages:
+  captured: "&a{faction} captured {outpost}!"
+  payout: "&aOutpost &6{outpost}&a paid &2${amount}&a to faction bank of &6{faction}&a."
+
+bossbar:
+  enabled: true
+  color: GREEN
+  style: SOLID
+
+mysql:
+  enabled: false
+  jdbc_url: "jdbc:mysql://localhost:3306/mc?useSSL=false&allowPublicKeyRetrieval=true"
+  username: "root"
+  password: ""
+
+outposts: {}
